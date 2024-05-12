@@ -1,0 +1,12 @@
+namespace dotnet_error_lookup.Data.Errors;
+
+public class CS3008 : IErrorOrWarning
+{
+    SyntaxErrorType IErrorOrWarning.ErrorType => SyntaxErrorType.Warning;
+    string IErrorOrWarning.Name => @"CS3008";
+    string IErrorOrWarning.Message => @"Identifier '{0}' is not CLS-compliant";
+    string IErrorOrWarning.Explanation => @"[original] Identifier '{0}' is not CLS-compliant";
+    string IErrorOrWarning.SampleCode => string.Empty;
+    string IErrorOrWarning.SampleFix => string.Empty;
+    string IErrorOrWarning.DocumentationReference => @"https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs3008";
+}
